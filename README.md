@@ -16,7 +16,7 @@ It is designed for easy experimentation with voice recognition and speech synthe
 ## Hardware Used
 - Mini pc: Rasberry Pi Model B+
 - Oled 0.96 inch via I2C
-- Loa and Mạch khuếch đại âm thanh PAM8403 6W Hifi 2.0 Class D (không volume)
+- PAM8403 6W Hifi 2.0 Class D Speaker and Amplifier Circuit (no volume)
 - Micro rasberry pi 
 
 ## Software & Tools
