@@ -1,87 +1,67 @@
-Giới thiệu
+# PeeDee Assistant
 
-PeeDee Assistant là một trợ lý ảo tiếng Việt, chạy độc lập trên Raspberry Pi, sử dụng AI (Google Gemini API) để trả lời câu hỏi người dùng.
+## Overview
+PeeDee Assistant is a simple voice assistant that listens to user commands and responds with appropriate answers.
+It is designed for easy experimentation with voice recognition and speech synthesis.
 
-Hỗ trợ giao tiếp bằng giọng nói.
 
-Xử lý đầu vào giọng nói → chuyển thành văn bản → gửi tới API → nhận kết quả → phát lại bằng giọng nói.
+---
 
-Dự án đã được chấp nhận & trình bày tại Hội nghị Khoa học 2024 (VNUHCM-US Conf).
+## Key Features
+- **Voice recognition:** Listens to user speech commands via microphone
+- **Speech response:** Replies with appropriate answers using text-to-speech
+- **Lightweight:** Easy to run on any mini PC with Python
+- **Simple interaction:** No complex setup, minimal dependencies
 
-Ứng dụng: trợ lý học tập, hỏi đáp tri thức, hệ thống giao tiếp người – máy (HRI).
+## Hardware Used
+- Mini pc: Rasberry Pi Model B+
+- Oled 0.96 inch via I2C
+- Loa and Mạch khuếch đại âm thanh PAM8403 6W Hifi 2.0 Class D (không volume)
+- Micro rasberry pi 
 
-Phần cứng sử dụng
+## Software & Tools
+- Programming Language: Python 3.11
+- Libraries: SpeechRecognition, pyttsx3 (or gTTS), API Germini flash 2.5 pro
+- IDE: VS Code
+- Platform: Linux
 
-Raspberry Pi 3 Model B+
+## Project Structure
+```
+PeeDee_assistant/
+├─ PeeDee # Source code files
+├─ PeeDee_3D # Source 3D cover of assistant
+├─ demo_PeeDee # Demo
+└─ README.md # This file
+```
 
-Microphone USB (thu âm giọng nói)
+## Getting Started
 
-Loa (xuất âm thanh TTS)
+### Prerequisites
+- Python 3.x installed
+- Required libraries: `SpeechRecognition`, `pyttsx3`, `pyaudio`
 
-Phần mềm & Công nghệ
+### Installation
+```bash
+git clone https://github.com/MinhQuocNguyenHoang/PeeDee_assistant.git
+cd PeeDee
+python main.py
+#peak a command into your microphone
+#PeeDee Assistant will process your speech and respond accordingly
+```
 
-Ngôn ngữ: Python
+## Demo
+- [Demo](./demo_PeeDee/)
 
-API: Google Gemini API (LLM)
+## Future Improvements
+- Add more natural language understanding for complex commands
+- Connect to APIs (e.g., weather, calendar)
+- Develop mobile or web interface for interaction
+- Multi-language support
 
-Âm thanh:
-
-Speech-to-Text (Google Speech API / Whisper)
-
-Text-to-Speech (gTTS / pyttsx3)
-
-Framework: HTTPS (trao đổi dữ liệu)
-
-Hệ điều hành: Raspberry Pi OS
-
-Tính năng chính
-
-Nhận diện giọng nói tiếng Việt (STT).
-
-Gửi câu hỏi đến Google Gemini API.
-
-Nhận câu trả lời bằng tiếng Việt.
-
-Phát lại phản hồi bằng loa (TTS).
-
-Cách cài đặt
-
-Clone repo
-
-Tải các thư viện yêu cầu
-
-Thêm vào API
-
-Chạy chương 
-
-Cách sử dụng
-
-Nói vào micro → hệ thống ghi âm & nhận diện.
-
-PeeDee gửi câu hỏi lên Gemini API.
-
-Nhận câu trả lời → chuyển thành giọng nói → phát ra loa.
-
-Demo : ở trên phần branch
-
-Hướng phát triển
-
-Tích hợp camera để nhận diện người nói (HRI).
-
-Thêm đa ngôn ngữ (Anh – Việt).
-
-Đưa vào ứng dụng robot giao tiếp.
-
-Tác giả:
-
-Nguyễn Hoàng Minh Quốc
-
-Phạm Mai Diệu Thảo
-
-Phạm Quốc Trung
-
-Phan Nguyễn Thanh Tùng
-
-Lê Bùi Xuân Quang
-
-Nguyễn Trí Thức
+## Author
+Nguyễn Hoàng Minh Quốc<br>
+Phạm Mai Diệu Thảo<br>
+Phan Nguyễn Thanh Tùng<br>
+Phạm Quốc Trung<br>
+Lê Bùi Xuân Quang<br>
+Nguyễn Trí Thức<br>
